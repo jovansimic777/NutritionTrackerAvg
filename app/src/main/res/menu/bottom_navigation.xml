@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_1"
+        android:icon="@drawable/ic_meal"
+        android:title="@string/all_meals" />
+
+    <item
+        android:id="@+id/navigation_2"
+        android:icon="@drawable/ic_like"
+        android:title="@string/my_meals" />
+
+    <item
+        android:id="@+id/navigation_3"
+        android:icon="@drawable/ic_plus"
+        android:title="@string/diet_plan" />
+
+    <item
+        android:id="@+id/navigation_4"
+        android:icon="@drawable/ic_chart"
+        android:title="@string/statistics" />
+
+    <item
+        android:id="@+id/navigation_5"
+        android:icon="@drawable/account"
+        android:title="@string/profile" />
+
+</menu>

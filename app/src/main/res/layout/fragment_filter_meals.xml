@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".presentation.view.fragments.FilterFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="16dp"
+        android:visibility="gone"
+        android:clipToPadding="false"/>
+
+    <ProgressBar
+        android:id="@+id/loadingPb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:id="@+id/filterBtns"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/removeFilterBtn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:layout_weight="1"
+            android:text="@string/remove_filter" />
+
+        <Button
+            android:id="@+id/categoryFilterBtn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:layout_weight="3"
+            android:text="@string/filter_by_category" />
+
+        <Button
+            android:id="@+id/areaFilterBtn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
+            android:layout_weight="3"
+            android:padding="0dp"
+
+            android:text="@string/filter_by_area" />
+
+        <Button
+            android:id="@+id/ingredientFilterBtn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:layout_weight="3"
+            android:text="@string/filter_by_ingredient" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
