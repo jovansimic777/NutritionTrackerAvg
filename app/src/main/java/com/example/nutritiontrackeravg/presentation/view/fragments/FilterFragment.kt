@@ -112,22 +112,22 @@ class FilterFragment : Fragment(R.layout.fragment_filter_meals) {
     private fun renderState(state: ParametersState) {
         when (state) {
             is ParametersState.Success -> {
-                showLoadingState(false)
+//                showLoadingState(false)
                 adapter.submitList(state.parameters)
             }
             is ParametersState.Error -> {
-                showLoadingState(false)
+//                showLoadingState(false)
                 adapter.submitList(listOf())
             }
             is ParametersState.Loading -> {
-                showLoadingState(true)
+//                showLoadingState(true)
             }
         }
     }
 
-    private fun showLoadingState(loading: Boolean) {
-        //TODO hide others
-
-        binding.loadingPb.isVisible = loading
-    }
+//    private fun showLoadingState(loading: Boolean) {
+//        //TODO hide others
+//
+//        binding.loadingPb.isVisible = loading
+//    }
 }

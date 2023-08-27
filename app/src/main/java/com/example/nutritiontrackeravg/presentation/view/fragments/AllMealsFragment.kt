@@ -120,7 +120,6 @@ class AllMealsFragment : Fragment(R.layout.fragment_all_meals) {
 
         parameterViewModel.fetchAll(ParameterType.CATEGORY)
     }
-
     private var pageSize = 10
     private var currentPage = 0
 
@@ -240,19 +239,19 @@ class AllMealsFragment : Fragment(R.layout.fragment_all_meals) {
         binding.pageNumberTV.text = (currentPage+1).toString()
         when (state) {
             is MealsApiState.Success -> {
-                showLoadingState(false)
+//                showLoadingState(false)
 //                adapter.submitList(state.meals)
                 renderAdapter()
             }
             is MealsApiState.Error -> {
-                showLoadingState(false)
+//                showLoadingState(false)
 //                renderAdapter()
                 adapter.submitList(listOf())
                 binding.forwardBtn.isEnabled = false
                 binding.backwardBtn.isEnabled = false
             }
             is MealsApiState.Loading -> {
-                showLoadingState(true)
+//                showLoadingState(true)
             }
         }
     }
@@ -282,11 +281,11 @@ class AllMealsFragment : Fragment(R.layout.fragment_all_meals) {
             adapter.submitList(listOf())
     }
 
-    private fun showLoadingState(loading: Boolean) {
-        //TODO hide others
-
-        binding.loadingPb.isVisible = loading
-    }
+//    private fun showLoadingState(loading: Boolean) {
+//        //TODO hide others
+//
+//        binding.loadingPb.isVisible = loading
+//    }
 
     override fun onDestroyView() {
         super.onDestroyView()

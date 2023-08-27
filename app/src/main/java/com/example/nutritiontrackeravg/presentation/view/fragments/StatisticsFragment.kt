@@ -91,16 +91,16 @@ class StatisticsFragment: Fragment(R.layout.fragment_statistics) {
     private fun renderState(state: MealsState) {
         when (state) {
             is MealsState.Success -> {
-                showLoadingState(false)
+//                showLoadingState(false)
                 renderData(state.meals)
             }
             is MealsState.Error -> {
-                showLoadingState(false)
+//                showLoadingState(false)
                 renderData(null)
                 Toast.makeText(requireContext().applicationContext, state.message, Toast.LENGTH_SHORT).show()
             }
             is MealsState.Loading -> {
-                showLoadingState(true)
+//                showLoadingState(true)
             }
         }
     }
@@ -177,7 +177,7 @@ class StatisticsFragment: Fragment(R.layout.fragment_statistics) {
         _binding = null
     }
 
-    private fun showLoadingState(loading: Boolean) {
-        binding.loadingPb.isVisible = loading
-    }
+//    private fun showLoadingState(loading: Boolean) {
+//        binding.loadingPb.isVisible = loading
+//    }
 }

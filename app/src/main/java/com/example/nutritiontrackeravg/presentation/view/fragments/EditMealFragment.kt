@@ -138,16 +138,16 @@ class EditMealFragment: Fragment(R.layout.fragment_edit_meal) {
     private fun renderState(state: SingleMealState) {
         when (state) {
             is SingleMealState.Success -> {
-                showLoadingState(false)
+//                showLoadingState(false)
                 renderData(state.meal)
             }
             is SingleMealState.Error -> {
-                showLoadingState(false)
+//                showLoadingState(false)
                 renderData(null)
                 Toast.makeText(requireContext().applicationContext, state.message, Toast.LENGTH_SHORT).show()
             }
             is SingleMealState.Loading -> {
-                showLoadingState(true)
+//                showLoadingState(true)
             }
         }
     }
@@ -172,9 +172,9 @@ class EditMealFragment: Fragment(R.layout.fragment_edit_meal) {
         }
     }
 
-    private fun showLoadingState(loading: Boolean) {
-        binding.loadingPb.isVisible = loading
-    }
+//    private fun showLoadingState(loading: Boolean) {
+//        binding.loadingPb.isVisible = loading
+//    }
 
 
     override fun onDestroyView() {

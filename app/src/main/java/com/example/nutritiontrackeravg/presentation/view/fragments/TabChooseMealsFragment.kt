@@ -171,15 +171,15 @@ class TabChooseMealsFragment : Fragment(R.layout.fragment_choose_meals) {
             when(it) {
                 is MealsState.Success -> {
                     Timber.e("acac event online success" + it.meals.size)
-                    showLoadingState(false)
+//                    showLoadingState(false)
                     adapterOnline.submitList(it.meals)
                 }
                 is MealsState.Error -> {
-                    showLoadingState(false)
+//                    showLoadingState(false)
                     adapterOnline.submitList(emptyList())
                 }
                 is MealsState.Loading -> {
-                    showLoadingState(true)
+//                    showLoadingState(true)
                 }
             }
         })
@@ -187,25 +187,25 @@ class TabChooseMealsFragment : Fragment(R.layout.fragment_choose_meals) {
         mealPlanViewModel.localMealsFiltered.observe(viewLifecycleOwner, Observer {
             when(it) {
                 is MealsState.Success -> {
-                    showLoadingState(false)
+//                    showLoadingState(false)
                     adapterLocal.submitList(it.meals)
                 }
                 is MealsState.Error -> {
-                    showLoadingState(false)
+//                    showLoadingState(false)
                     adapterLocal.submitList(emptyList())
                 }
                 is MealsState.Loading -> {
-                    showLoadingState(true)
+//                    showLoadingState(true)
                 }
             }
         })
     }
 
-    private fun showLoadingState(loading: Boolean) {
-        //TODO hide others
-
-        binding.loadingPb.isVisible = loading
-    }
+//    private fun showLoadingState(loading: Boolean) {
+//        //TODO hide others
+//
+//        binding.loadingPb.isVisible = loading
+//    }
 
     override fun onDestroyView() {
         super.onDestroyView()

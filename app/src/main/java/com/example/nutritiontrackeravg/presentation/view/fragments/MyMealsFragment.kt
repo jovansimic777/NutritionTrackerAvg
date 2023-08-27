@@ -95,26 +95,26 @@ class MyMealsFragment : Fragment(R.layout.fragment_my_meals) {
             Timber.d("observed all meals: $it")
             when(it) {
                 is MealsState.Success -> {
-                    showLoadingState(false)
+//                    showLoadingState(false)
                     adapter.submitList(it.meals)
                 }
                 is MealsState.Error -> {
-                    showLoadingState(false)
+//                    showLoadingState(false)
                     adapter.submitList(emptyList())
                 }
                 is MealsState.Loading -> {
-                    showLoadingState(true)
+//                    showLoadingState(true)
 //                    adapter.submitList(emptyList())
                 }
             }
         })
     }
 
-    private fun showLoadingState(loading: Boolean) {
-        //TODO hide others
-
-        binding.loadingPbSaved.isVisible = loading
-    }
+//    private fun showLoadingState(loading: Boolean) {
+//        //TODO hide others
+//
+//        binding.loadingPbSaved.isVisible = loading
+//    }
 
     override fun onDestroyView() {
         super.onDestroyView()

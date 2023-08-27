@@ -104,7 +104,7 @@ class MailService {
             $formattedMealsFriday
             
             Regards,
-            TopGastroGuru Team
+            NutritionTracker
         """.trimIndent()
 
             // Create a session with the SMTP server
