@@ -9,10 +9,6 @@ interface PlanOverViewContract {
 
         val mondayState: LiveData<List<MealDto>>
         val tuesdayState: LiveData<List<MealDto>>
-        val wednesdayState: LiveData<List<MealDto>>
-        val thursdayState: LiveData<List<MealDto>>
-        val saturdayState: LiveData<List<MealDto>>
-        val sundayState: LiveData<List<MealDto>>
         val fridayState: LiveData<List<MealDto>>
 
         fun addMealToDay(meal: MealDto, day: Weekday)
